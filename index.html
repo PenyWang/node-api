@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.js"></script>
+</head>
+<body>
+    <script>
+
+        axios.get('http://localhost:3000', {
+            responseType: 'blob'
+        }).then(val => {
+            const url = window.URL.createObjectURL(val.data)
+            console.log(url)
+        })
+        
+    </script>
+</body>
+</html>
